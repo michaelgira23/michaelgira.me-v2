@@ -1,2 +1,8 @@
 node_modules
-src/css
+
+src/public/css/*
+!src/public/css/styles.css
+
+src/public/js/*
+!src/public/js/easings.js
+!src/public/js/main.js

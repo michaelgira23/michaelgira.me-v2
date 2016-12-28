@@ -2,8 +2,9 @@
   "name": "michaelgira.me",
   "version": "2.0.0",
   "description": "My personal website",
-  "main": "gulpfile.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "concurrently \"node ./src/index.js\" \"gulp\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,10 +22,12 @@
   },
   "homepage": "https://github.com/michaelgira23/michaelgira.me-v2#readme",
   "dependencies": {
+    "express": "^4.14.0",
     "normalize.css": "^5.0.0",
     "snap.svg": "adobe-webplatform/Snap.svg"
   },
   "devDependencies": {
+    "concurrently": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.0.0"
   }
