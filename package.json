@@ -1,0 +1,31 @@
+{
+  "name": "michaelgira.me",
+  "version": "2.0.0",
+  "description": "My personal website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelgira23/michaelgira.me-v2.git"
+  },
+  "keywords": [
+    "Michael",
+    "Gira"
+  ],
+  "author": "Michael Gira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelgira23/michaelgira.me-v2/issues"
+  },
+  "homepage": "https://github.com/michaelgira23/michaelgira.me-v2#readme",
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "snap.svg": "adobe-webplatform/Snap.svg"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
+}
