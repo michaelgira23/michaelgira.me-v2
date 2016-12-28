@@ -95,12 +95,34 @@ small {
 				margin: 0;
 			}
 
+			.intro-contact {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+
+				.github img {
+					width: 2.5rem;
+					margin-right: 1rem;
+				}
+
+				.email {
+					margin: 0;
+					font-family: 'Roboto', sans-serif;
+					font-size: 1.25rem;
+					font-weight: 100;
+				}
+			}
+
 		}
 	}
 
 	.skills,
 	.projects {
 		padding: 0 25%;
+
+		h2 {
+			border-bottom: 1px solid $black;
+		}
 
 		ul li {
 			margin: 0.5rem;
@@ -149,37 +171,6 @@ small {
 				.project-image {
 					width: 100%;
 				}
-
-				// .project-details {
-				// 	position: relative;
-				//
-				// 	.project-image {
-				// 		width: 100%;
-				// 		height: 100%;
-				// 	}
-				//
-				// 	&:hover .project-image-overlay {
-				// 		background-color: rgba($black, 0.8);
-				// 	}
-				//
-				// 	.project-image-overlay {
-				//
-				// 		.project-desc {
-				// 			position: absolute;
-				// 			top: 0.5rem;
-				// 			right: 0;
-				// 			left: 0;
-				// 		}
-				//
-				// 		.project-code {
-				// 			position: absolute;
-				//
-				// 			img {
-				// 				width: 2.5rem;
-				// 			}
-				// 		}
-				// 	}
-				// }
 			}
 		}
 	}

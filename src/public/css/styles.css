@@ -66,9 +66,24 @@ small {
     align-items: center; }
     #boring-content .header .intro .intro-hello {
       margin: 0; }
+    #boring-content .header .intro .intro-contact {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      #boring-content .header .intro .intro-contact .github img {
+        width: 2.5rem;
+        margin-right: 1rem; }
+      #boring-content .header .intro .intro-contact .email {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 100; }
   #boring-content .skills,
   #boring-content .projects {
     padding: 0 25%; }
+    #boring-content .skills h2,
+    #boring-content .projects h2 {
+      border-bottom: 1px solid #111; }
     #boring-content .skills ul li,
     #boring-content .projects ul li {
       margin: 0.5rem;
