@@ -1,8 +1,6 @@
 node_modules
 
 src/public/css/*
-!src/public/css/styles.css
-
 src/public/js/*
 !src/public/js/easings.js
 !src/public/js/animation.js
