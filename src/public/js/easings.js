@@ -61,9 +61,15 @@
 
 var pow = Math.pow;
 var sqrt = Math.sqrt;
+var c1 = 1.70158;
+var c3 = c1 + 1;
 
 function easeInOutCirc (x) {
 	return x < 0.5 ?
 		( 1 - sqrt( 1 - pow( 2 * x, 2 ) ) ) / 2 :
 		( sqrt( 1 - pow( -2 * x + 2, 2 ) ) + 1 ) / 2;
+}
+
+function easeInBack (x) {
+	return c3 * x * x * x - c1 * x * x;
 }

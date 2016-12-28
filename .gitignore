@@ -5,4 +5,4 @@ src/public/css/*
 
 src/public/js/*
 !src/public/js/easings.js
-!src/public/js/main.js
+!src/public/js/animation.js

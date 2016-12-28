@@ -1,6 +1,7 @@
 window.onload = function() {
 
-	var svg = document.getElementById('svg');
+	var svg = document.getElementById('exciting-svg');
+	var content = document.getElementById('boring-content')
 
 	// while(svg.width.baseVal.value <= 0) {}
 
@@ -8,8 +9,6 @@ window.onload = function() {
 
 	var svgWidth = svg.width.baseVal.value;
 	var svgHeight = svg.height.baseVal.value;
-
-	console.log(svgWidth, svgHeight);
 
 	// Create name
 	var name = s.text(0, 0, 'Michael Gira')
@@ -54,7 +53,7 @@ window.onload = function() {
 		rect.attr({
 			strokeDasharray: value + ' ' + (dashArray - value)
 		});
-	}, 800, easeInOutCirc, function() {
+	}, 500, easeInOutCirc, function() {
 
 		// Make rectangle collapse to center
 		var centerWidth = 1;
@@ -62,13 +61,13 @@ window.onload = function() {
 		rect.animate({
 			x: rectDimensions.x,
 			width: centerWidth
-		}, 500, easeInOutCirc, function() {
+		}, 400, easeInOutCirc, function() {
 
 			// Swipe rectangle to the right
 			var rightX = svgWidth - ((svgWidth - nameBounds.x2) / 3);
 			rect.animate({
 				x: rightX
-			}, 500, easeInOutCirc, function() {
+			}, 400, easeInOutCirc, function() {
 
 				// Create a clone of rectangle for mask for name
 				var rectMask = rect.clone();
@@ -103,7 +102,45 @@ window.onload = function() {
 						x: newTextX
 					});
 
-				}, 1000, easeInOutCirc);
+				}, 800, easeInOutCirc, function() {
+
+					// Bask in the glory of my name
+					setTimeout(function() {
+
+						// Finally, clear animation and move everything up
+						var initialRectY = rectDimensions.y;
+						var initialTextY = nameDimensions.y;
+						var finalY = -rectHeight;
+
+						Snap.animate(0, 1, function(value) {
+
+							var newRectY = initialRectY - ((initialRectY - finalY) * value);
+							var newTextY = initialTextY - ((initialTextY - finalY) * value);
+
+							rect.attr({
+								y: newRectY
+							});
+
+							rectMask.attr({
+								y: newRectY
+							});
+
+							name.attr({
+								y: newTextY
+							});
+
+						}, 500, easeInBack, function() {
+
+							// Hide everything
+							svg.style.display = 'none';
+							// Show content
+							content.className += 'show';
+
+						});
+
+					}, 200);
+
+				});
 
 			});
 
