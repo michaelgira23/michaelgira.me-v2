@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Michael Gira</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:100,300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body>
+		<svg id="exciting-svg"></svg>
+
+		<div id="boring-content">
+			<div class="header">
+				<div class="intro">
+					<h1 class="intro-hello">Hello.</h1>
+					<p class="intro-desc">My name is Michael Gira, and I've been a full stack developer for a few years now.</p>
+					<div class="intro-contact">
+						<a class="github" href="https://github.com/michaelgira23" target="_blank">
+							<img src="/img/github/dark.svg">
+						</a>
+						<p class="email">contact@michaelgira.me</p>
+					</div>
+				</div>
+			</div>
+			<div class="skills">
+				<h2>Skills</h2>
+				<ul>
+					<% skills.forEach(skill => { %>
+						<li><%= skill %></li>
+					<% }); %>
+				</ul>
+			</div>
+			<div class="projects">
+				<h2>Projects</h2>
+				<div class="projects-list">
+					<% projects.forEach(project => { %>
+						<div class="project">
+							<h3 class="project-heading">
+								<a class="project-code" href="https://github.com/<%= project.github %>" target="_blank">
+									<img src="/img/github/dark.svg">
+								</a>
+								<%= project.name %>
+							</h3>
+							<p class="project-desc"><%= project.desc %></p>
+							<a href="<%= project.live %>" target="_blank">
+								<img class="project-image" src="/img/projects/<%= project.imageURL %>">
+							</a>
+						</div>
+					<% }); %>
+				</div>
+			</div>
+		</div>
+
+		<div>
+
+		</div>
+
+		<script src="/js/snap.svg-min.js"></script>
+		<script src="/js/easings.js"></script>
+		<script src="/js/animation.js"></script>
+	</body>
+</html>

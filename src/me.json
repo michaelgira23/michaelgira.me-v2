@@ -1,0 +1,31 @@
+{
+	"skills": [
+		"Front-End (HTML, CSS, JavaScript)",
+		"PHP",
+		"node.js",
+		"Angular 2"
+	],
+	"projects": [
+		{
+			"name": "MyMICDS.net",
+			"desc": "A school portal to help organize your student life at MICDS.",
+			"live": "https://mymicds.net",
+			"github": "michaelgira23/MyMICDS-v2",
+			"imageURL": "MyMICDS.png"
+		},
+		{
+			"name": "Parades",
+			"desc": "A mix of Pictionary and Charades. Also called Charictionary.",
+			"live": "https://michaelgira.me/parades",
+			"github": "michaelgira23/Parades",
+			"imageURL": "parades.png"
+		},
+		{
+			"name": "Pear Tutoring",
+			"desc": "Uber of peer tutoring. Won first place at the WWT Hackathon.",
+			"live": "https://peartutoring.net",
+			"github": "michaelgira23/Pear-Tutoring",
+			"imageURL": "pearerino.png"
+		}
+	]
+}
