@@ -47,18 +47,14 @@
 								</a>
 								<%= project.name %>
 							</h3>
-							<p class="project-desc"><%= project.desc %></p>
-							<a href="<%= project.live %>" target="_blank">
+							<a class="project-hover" href="<%= project.live %>" target="_blank">
 								<img class="project-image" src="/img/projects/<%= project.imageURL %>">
+								<p class="project-desc"><%= project.desc %></p>
 							</a>
 						</div>
 					<% }); %>
 				</div>
 			</div>
-		</div>
-
-		<div>
-
 		</div>
 
 		<script src="/js/snap.svg-min.js"></script>
