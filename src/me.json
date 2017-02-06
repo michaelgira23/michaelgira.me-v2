@@ -1,13 +1,81 @@
 {
 	"skills": [
-		"Front-End (HTML, CSS, JavaScript)",
-		"PHP",
-		"node.js",
-		"Angular 2"
+		{
+			"name": "HTML5",
+			"logo": "html5/html5-original.svg"
+		},
+		{
+			"name": "CSS3",
+			"logo": "css3/css3-original.svg"
+		},
+		{
+			"name": "Bootstrap 3 & 4",
+			"logo": "bootstrap/bootstrap-plain.svg"
+		},
+		{
+			"name": "Sass",
+			"logo": "sass/sass-original.svg"
+		},
+		{
+			"name": "JavaScript",
+			"logo": "javascript/javascript-original.svg"
+		},
+		{
+			"name": "jQuery",
+			"logo": "jquery/jquery-original.svg"
+		},
+		{
+			"name": "Angular 2",
+			"logo": "angularjs/angularjs-plain.svg"
+		},
+		{
+			"name": "node.js",
+			"logo": "nodejs/nodejs-original.svg"
+		},
+		{
+			"name": "MongoDB",
+			"logo": "mongodb/mongodb-original.svg"
+		},
+		{
+			"name": "Gulp",
+			"logo": "gulp/gulp-plain.svg"
+		},
+		{
+			"name": "PHP",
+			"logo": "php/php-original.svg"
+		},
+		{
+			"name": "MySQL",
+			"logo": "mysql/mysql-original.svg"
+		},
+		{
+			"name": "Git",
+			"logo": "git/git-original.svg"
+		},
+		{
+			"name": "Apache",
+			"logo": "apache/apache-original.svg"
+		},
+		{
+			"name": "NGINX",
+			"logo": "nginx/nginx-original.svg"
+		},
+		{
+			"name": "Ubuntu",
+			"logo": "ubuntu/ubuntu-plain.svg"
+		},
+		{
+			"name": "Photoshop",
+			"logo": "photoshop/photoshop-plain.svg"
+		},
+		{
+			"name": "Illustrator",
+			"logo": "illustrator/illustrator-plain.svg"
+		}
 	],
 	"projects": [
 		{
-			"name": "MyMICDS.net",
+			"name": "MyMICDS",
 			"desc": "A school portal to help organize your student life at MICDS.",
 			"live": "https://mymicds.net",
 			"github": "michaelgira23/MyMICDS-v2",

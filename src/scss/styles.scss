@@ -1,5 +1,6 @@
 $black: #111;
 $white: #eee;
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 
 * {
 	margin-top: 0;
@@ -23,13 +24,13 @@ h1, h2, h3, h4, h5, h6, text {
 }
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  line-height: 1.2;
+	margin: 1.414em 0 0.5em;
+	line-height: 1.2;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 6.854em;
+	margin-top: 0;
+	font-size: 6.854em;
 }
 
 h2 {
@@ -68,26 +69,20 @@ small {
 #boring-content {
 	height: 100%;
 	margin-bottom: 6rem;
+	padding: 1.5rem;
 	display: none;
 	opacity: 0;
 
-	// background: #00C9FF; /* fallback for old browsers */
-	// background: -webkit-linear-gradient(45deg, #92FE9D , #00C9FF); /* Chrome 10-25, Safari 5.1-6 */
-	// background: linear-gradient(45deg, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-	// background: -webkit-linear-gradient(45deg,  #00C9FF, #92FE9D); /* Chrome 10-25, Safari 5.1-6 */
-	// background: linear-gradient(45deg, #00C9FF, #92FE9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 	&.show {
 		display: block;
-		-webkit-animation: fadeIn 0.5s ease-in-out forwards,
+		-webkit-animation: fadeIn 0.5s $ease-out-expo forwards,
 			addScroll 0.5s linear 1.5s forwards;
-		animation: fadeIn 0.5s ease-in-out forwards,
+		animation: fadeIn 0.5s $ease-out-expo forwards,
 			addScroll 0.5s linear 1.5s forwards;
 
 		.header {
-			-webkit-animation: squish 0.5s ease-in-out 1s forwards;
-			animation: squish 0.5s ease-in-out 1s forwards;
+			-webkit-animation: squish 0.5s $ease-out-expo 1s forwards;
+			animation: squish 0.5s $ease-out-expo 1s forwards;
 		}
 	}
 
@@ -117,7 +112,6 @@ small {
 				.email {
 					margin: 0;
 					font-family: 'Roboto', sans-serif;
-					font-size: 1.25rem;
 					font-weight: 100;
 				}
 			}
@@ -127,15 +121,23 @@ small {
 
 	.skills,
 	.projects {
-		padding: 0 25%;
-
 		h2 {
 			border-bottom: 1px solid $black;
 		}
+	}
 
-		ul li {
-			margin: 0.5rem;
-			font-size: 1.5rem;
+	.skills .skills-list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		.skill {
+			width: percentage(1 / 3);
+			margin-bottom: 2.5rem;
+
+			.skill-name {
+				text-align: center;
+			}
 		}
 	}
 
@@ -155,6 +157,8 @@ small {
 					display: flex;
 					justify-content: flex-start;
 
+					margin-top: 0;
+
 					.project-code {
 						margin-right: 0.5rem;
 
@@ -165,10 +169,6 @@ small {
 
 					.project-title {
 						margin: 0;
-
-						&.project-title--small {
-							font-size: 2rem;
-						}
 					}
 				}
 
@@ -176,8 +176,79 @@ small {
 					position: relative;
 					display: inline-block;
 
-					&:hover .project-desc {
-						opacity: 1;
+					overflow: hidden;
+					border: 1px solid rgba(mix($black, $white), 0.5);
+
+					$hover-padding: 0.25rem;
+					$hover-width: 2.5rem;
+
+					&:hover {
+						.project-desc {
+							opacity: 1;
+						}
+
+						.hover {
+							&.hover--top {
+								transform: translate3d(0, $hover-width + $hover-padding, 0);
+							}
+
+							&.hover--right {
+								transform: translate3d(-($hover-width + $hover-padding), 0, 0);
+							}
+
+							&.hover--bottom {
+								transform: translate3d(0, -($hover-width + $hover-padding), 0);
+							}
+
+							&.hover--left {
+								transform: translate3d($hover-width + $hover-padding, 0, 0);
+							}
+						}
+					}
+
+					.hover {
+						position: absolute;
+						transition-property: transform;
+						transition-duration: 0.25s;
+						transition-timing-function: $ease-out-expo;
+
+						&.hover--top,
+						&.hover--bottom {
+							width: calc(100% - #{$hover-padding * 2});
+							height: $hover-width;
+
+							left: $hover-padding;
+
+							border-right: 1px solid $white;
+							border-left: 1px solid $white;
+						}
+
+						&.hover--right,
+						&.hover--left {
+							width: $hover-width;
+							height: calc(100% - #{$hover-padding * 2});
+
+							top: $hover-padding;
+
+							border-top: 1px solid $white;
+							border-bottom: 1px solid $white;
+						}
+
+						&.hover--top {
+							top: -2.5rem;
+						}
+
+						&.hover--right {
+							right: -2.5rem;
+						}
+
+						&.hover--bottom {
+							bottom: -2.5rem;
+						}
+
+						&.hover--left {
+							left: -2.5rem;
+						}
 					}
 
 					.project-image {
@@ -185,7 +256,6 @@ small {
 					}
 
 					.project-desc {
-
 						position: absolute;
 						top: 0;
 						right: 0;
@@ -202,7 +272,7 @@ small {
 						opacity: 0;
 						transition-property: opacity;
 						transition-duration: 0.25s;
-						transition-timing-function: ease-in-out;
+						transition-timing-function: $ease-out-expo;
 
 						text-align: justify;
 
@@ -213,12 +283,32 @@ small {
 			}
 		}
 	}
-
 }
 
-@media (min-width: 1200px) {
-	#boring-content .projects .projects-list .project {
-		width: 45%;
+@media (min-width: 576px) {
+	#boring-content {
+		.skills .skills-list .skill {
+			width: percentage(1 / 5);
+		}
+
+		.projects .projects-list .project {
+			width: percentage(1 / 2) - 5%;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	#boring-content .skills .skills-list .skill {
+		width: percentage(1 / 6);
+	}
+}
+
+@media (min-width: 992px) {
+	#boring-content {
+		.skills,
+		.projects {
+			padding: 0 25%;
+		}
 	}
 }
 

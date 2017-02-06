@@ -1,9 +1,9 @@
 window.onload = function() {
 
-	var svg = document.getElementById('exciting-svg');
-	var content = document.getElementById('boring-content')
+	var ease = easeInOutCirc;
 
-	// while(svg.width.baseVal.value <= 0) {}
+	var svg = document.getElementById('exciting-svg');
+	var content = document.getElementById('boring-content');
 
 	var s = Snap(svg);
 
@@ -53,7 +53,7 @@ window.onload = function() {
 		rect.attr({
 			strokeDasharray: value + ' ' + (dashArray - value)
 		});
-	}, 500, easeInOutCirc, function() {
+	}, 500, ease, function() {
 
 		// Make rectangle collapse to center
 		var centerWidth = 1;
@@ -61,13 +61,13 @@ window.onload = function() {
 		rect.animate({
 			x: rectDimensions.x,
 			width: centerWidth
-		}, 400, easeInOutCirc, function() {
+		}, 400, ease, function() {
 
 			// Swipe rectangle to the right
 			var rightX = svgWidth - ((svgWidth - nameBounds.x2) / 3);
 			rect.animate({
 				x: rightX
-			}, 400, easeInOutCirc, function() {
+			}, 400, ease, function() {
 
 				// Create a clone of rectangle for mask for name
 				var rectMask = rect.clone();
@@ -102,7 +102,7 @@ window.onload = function() {
 						x: newTextX
 					});
 
-				}, 800, easeInOutCirc, function() {
+				}, 800, ease, function() {
 
 					// Bask in the glory of my name
 					setTimeout(function() {
