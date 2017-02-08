@@ -1,6 +1,6 @@
 $black: #111;
 $white: #eee;
-$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 * {
 	margin-top: 0;
@@ -75,14 +75,14 @@ small {
 
 	&.show {
 		display: block;
-		-webkit-animation: fadeIn 0.5s $ease-out-expo forwards,
+		-webkit-animation: fadeIn 0.5s ease-in-out forwards,
 			addScroll 0.5s linear 1.5s forwards;
-		animation: fadeIn 0.5s $ease-out-expo forwards,
+		animation: fadeIn 0.5s ease-in-out forwards,
 			addScroll 0.5s linear 1.5s forwards;
 
 		.header {
-			-webkit-animation: squish 0.5s $ease-out-expo 1s forwards;
-			animation: squish 0.5s $ease-out-expo 1s forwards;
+			-webkit-animation: squish 0.5s $ease-in-out-cubic 1s forwards;
+			animation: squish 0.5s $ease-in-out-cubic 1s forwards;
 		}
 	}
 
