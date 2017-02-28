@@ -15,8 +15,8 @@
 		<svg id="exciting-svg"></svg>
 
 		<div id="boring-content">
-			<div class="header">
-				<div class="intro">
+			<div class="header-container">
+				<header>
 					<h1 class="intro-hello">Hello.</h1>
 					<p class="intro-desc">My name is Michael Gira, and I've been a full stack developer for a few years now.</p>
 					<div class="intro-contact">
@@ -25,9 +25,9 @@
 						</a>
 						<p class="email">contact@michaelgira.me</p>
 					</div>
-				</div>
+				</header>
 			</div>
-			<div class="skills">
+			<section class="skills">
 				<h2>Skills</h2>
 				<div class="skills-list">
 					<% skills.forEach(skill => { %>
@@ -37,8 +37,8 @@
 						</div>
 					<% }); %>
 				</div>
-			</div>
-			<div class="projects">
+			</section>
+			<section class="projects">
 				<h2>Projects</h2>
 				<div class="projects-list">
 					<% projects.forEach(project => { %>
@@ -60,10 +60,10 @@
 						</div>
 					<% }); %>
 				</div>
-			</div>
-			<div class="footer">
+			</section>
+			<footer>
 				Copyright &copy; 2017 Michael Gira
-			</div>
+			</footer>
 		</div>
 
 		<script src="/js/snap.svg-min.js"></script>

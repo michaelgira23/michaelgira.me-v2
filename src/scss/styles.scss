@@ -80,24 +80,20 @@ small {
 		animation: fadeIn 0.5s ease-in-out forwards,
 			addScroll 0.5s linear 1.5s forwards;
 
-		.header {
+		.header-container {
 			-webkit-animation: squish 0.5s $ease-in-out-cubic 1s forwards;
 			animation: squish 0.5s $ease-in-out-cubic 1s forwards;
 		}
 	}
 
-	> *:last-child {
-		margin-bottom: 6rem;
-	}
-
-	.header {
+	.header-container {
 		height: 100%;
 
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
-		.intro {
+		header {
 
 			.intro-hello {
 				margin: 0;
@@ -287,8 +283,9 @@ small {
 		}
 	}
 
-	.footer {
+	footer {
 		margin-top: 1.414em;
+		margin-bottom: 6rem;
 		text-align: center;
 		font-weight: 300;
 	}
