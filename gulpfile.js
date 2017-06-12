@@ -32,7 +32,7 @@ gulp.task('assets:js', () => {
 });
 
 // Move all Devicon logos from node_modules into the logos folder
-gulp.task('logos', () => {
+gulp.task('assets:logos', () => {
 
 	// Read logos from me.json
 	const logoPaths = [];
@@ -45,9 +45,10 @@ gulp.task('logos', () => {
 });
 
 // Listen for file changes in the me.json for importing logos
-gulp.task('logos:watch', () => {
+gulp.task('assets:logos:watch', () => {
 	gulp.watch(jsonPath, ['logos']);
 });
 
-gulp.task('assets', ['assets:css', 'assets:js', 'logos']);
-gulp.task('default', ['assets', 'sass', 'sass:watch', 'logos:watch']);
+gulp.task('assets', ['assets:css', 'assets:js', 'assets:logos']);
+gulp.task('default', ['assets', 'sass', 'sass:watch', 'assets:logos:watch']);
+gulp.task('prod', ['assets', 'sass']);
