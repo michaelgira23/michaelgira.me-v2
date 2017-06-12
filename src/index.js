@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 // Static Files
-app.use('/', express.static(__dirname + '/public'));
+app.use('/assets', express.static(__dirname + '/public'));
 
 // Main site
 app.get('/', (req, res) => {

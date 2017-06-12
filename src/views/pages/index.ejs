@@ -8,8 +8,8 @@
 		<title>Michael Gira</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:100,300,400" rel="stylesheet">
-		<link rel="stylesheet" href="/css/normalize.css">
-		<link rel="stylesheet" href="/css/styles.css">
+		<link rel="stylesheet" href="/assets/css/normalize.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
 	</head>
 	<body>
 		<svg id="exciting-svg"></svg>
@@ -21,7 +21,7 @@
 					<p class="intro-desc">My name is Michael Gira, and I've been a full stack developer for a few years now.</p>
 					<div class="intro-contact">
 						<a class="github" href="https://github.com/michaelgira23" target="_blank">
-							<img src="/img/github/dark.svg">
+							<img src="/assets/img/github/dark.svg">
 						</a>
 						<p class="email">contact@michaelgira.me</p>
 					</div>
@@ -32,7 +32,7 @@
 				<div class="skills-list">
 					<% skills.forEach(skill => { %>
 						<div class="skill">
-							<img class="skill-logo" src="/img/logos/<%= skill.logo.split('/')[1] %>">
+							<img class="skill-logo" src="/assets/img/logos/<%= skill.logo.split('/')[1] %>">
 							<h5 class="skill-name"><%= skill.name %></h5>
 						</div>
 					<% }); %>
@@ -45,12 +45,12 @@
 						<div class="project">
 							<h3 class="project-heading">
 								<a class="project-code" href="https://github.com/<%= project.github %>" target="_blank">
-									<img src="/img/github/dark.svg">
+									<img src="/assets/img/github/dark.svg">
 								</a>
 								<%= project.name %>
 							</h3>
 							<a class="project-hover" href="<%= project.live %>" target="_blank">
-								<img class="project-image" src="/img/projects/<%= project.imageURL %>">
+								<img class="project-image" src="/assets/img/projects/<%= project.imageURL %>">
 								<p class="project-desc"><%= project.desc %></p>
 								<div class="hover hover--top"></div>
 								<div class="hover hover--right"></div>
@@ -66,8 +66,8 @@
 			</footer>
 		</div>
 
-		<script src="/js/snap.svg-min.js"></script>
-		<script src="/js/easings.js"></script>
-		<script src="/js/animation.js"></script>
+		<script src="/assets/js/snap.svg-min.js"></script>
+		<script src="/assets/js/easings.js"></script>
+		<script src="/assets/js/animation.js"></script>
 	</body>
 </html>
