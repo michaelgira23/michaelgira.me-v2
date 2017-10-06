@@ -82,11 +82,11 @@
 			"imageURL": "MyMICDS.png"
 		},
 		{
-			"name": "Parades",
-			"desc": "A mix of Pictionary and Charades. Also called Charictionary.",
-			"live": "https://michaelgira.me/parades",
-			"github": "michaelgira23/Parades",
-			"imageURL": "parades.png"
+			"name": "swarms",
+			"desc": "The ultimate node.js library for controlling Bitcraze Crazyflie 2.0 drones ",
+			"live": "https://michaelgira23.github.io/swarms",
+			"github": "michaelgira23/swarms",
+			"imageURL": "drone.jpg"
 		},
 		{
 			"name": "Pear Tutoring",
@@ -94,6 +94,13 @@
 			"live": "https://peartutoring.net",
 			"github": "michaelgira23/Pear-Tutoring",
 			"imageURL": "pearerino.png"
+		},
+		{
+			"name": "Nuclear Energy Simulator 2017",
+			"desc": "Plan, build, and manage nuclear power plants to become the greenest country on the planet (created for my global issues class)",
+			"live": "https://nuclear.michaelgira.me",
+			"github": "michaelgira23/nuclear-energy-simulator-2017",
+			"imageURL": "nuclear.png"
 		}
 	]
 }
