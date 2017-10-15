@@ -1,2 +1,2 @@
-# michaelgira.me-v2
+# michaelgira.me
 My personal website
