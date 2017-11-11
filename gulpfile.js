@@ -1,8 +1,9 @@
-'use strict';
-
-const fs   = require('fs');
-const gulp = require('gulp');
-const sass = require('gulp-sass');
+const fs           = require('fs');
+const gulp         = require('gulp');
+const rename       = require('gulp-rename');
+const sass         = require('gulp-sass');
+const postcss      = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 
 const jsonPath = './src/me.json';
 const deviconPath = './node_modules/devicon/icons/';
@@ -10,7 +11,8 @@ const deviconPath = './node_modules/devicon/icons/';
 // Compile Sass
 gulp.task('sass', () => {
 	return gulp.src('./src/scss/**/*.scss')
-		.pipe(sass().on('error', sass.logError))
+		.pipe(postcss([ autoprefixer() ]))
+		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(gulp.dest('./src/public/css'));
 });
 
@@ -22,7 +24,8 @@ gulp.task('sass:watch', () => {
 // Move all CSS assets from node_modules into the CSS folder
 gulp.task('assets:css', () => {
 	gulp.src(['./node_modules/normalize.css/normalize.css'])
-		.pipe(gulp.dest('./src/public/css'));
+		.pipe(rename({ extname: '.scss' }))
+		.pipe(gulp.dest('./src/scss'));
 });
 
 // Move all JS assets from node_modules into the JS folder

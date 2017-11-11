@@ -1,5 +1,6 @@
 node_modules
 
+src/scss/normalize.scss
 src/public/css/*
 src/public/js/*
 !src/public/js/easings.js
