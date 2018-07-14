@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<% if (locals.title) { %>
+			<title><%= locals.title %></title>
+		<% } %>
+
+		<meta name="description" content="Michael Gira - Full Stack Developer">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png?v=ngkwmvkKpr">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png?v=ngkwmvkKpr">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png?v=ngkwmvkKpr">
+		<link rel="manifest" href="../../assets/favicon/site.webmanifest?v=ngkwmvkKpr">
+		<link rel="mask-icon" href="../../assets/favicon/safari-pinned-tab.svg?v=ngkwmvkKpr" color="#000000">
+		<link rel="shortcut icon" href="../../assets/favicon/favicon.ico?v=ngkwmvkKpr">
+		<meta name="apple-mobile-web-app-title" content="Michael Gira">
+		<meta name="application-name" content="Michael Gira">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="../../assets/favicon/mstile-144x144.png?v=ngkwmvkKpr">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="stylesheet" href="../../../node_modules/sanitize.css/sanitize.css">
+		<link rel="stylesheet" href="../../globals.scss">
+
+		<% if (locals.styles) { %>
+			<% for (const style of locals.styles) { %>
+				<link rel="stylesheet" href="<%- style %>">
+			<% } %>
+		<% } %>
+	</head>
+	<body>

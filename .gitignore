@@ -1,8 +1,4 @@
 node_modules
-
-src/scss/normalize.scss
-src/public/css/*
-src/public/js/*
-!src/public/js/easings.js
-!src/public/js/animation.js
-src/public/img/logos
+dist
+.cache
+*.log
