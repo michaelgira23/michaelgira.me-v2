@@ -6,7 +6,7 @@ import * as path from 'path';
 const app = express();
 
 function serve(res: express.Response, pageName: string, httpCode = 200) {
-	res.status(httpCode).sendFile(path.join(__dirname, 'dist', pageName, `${pageName}.html`));
+	res.status(httpCode).sendFile(path.join(__dirname, 'dist', `${pageName}.html`));
 }
 
 // Serve static files

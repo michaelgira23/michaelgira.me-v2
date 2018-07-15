@@ -1,6 +1,11 @@
-html {
-	h1 {
-		color: rgba(purple, 0.8);
-		font-size: 5rem;
-	}
+$svg-margin: 0;
+
+.animation-overlay {
+	width: calc(100% - #{$svg-margin * 2});
+	height: calc(100% - #{$svg-margin * 2});
+	position: absolute;
+	top: $svg-margin;
+	right: $svg-margin;
+	bottom: $svg-margin;
+	left: $svg-margin;
 }
