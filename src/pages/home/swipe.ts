@@ -57,7 +57,7 @@ export class Swipe {
 		this.yTo = this.yMid - diagonalWidth;
 
 		this.setAttribute('x', this.xFrom);
-		this.setAttribute('y', this.yMid);
+		this.setAttribute('y', this.yFrom);
 		this.setAttribute('width', this.width);
 		this.setAttribute('height', this.height);
 		this.setAttribute('transform', `rotate(-45, ${svgViewboxWidth}, ${svgViewboxHeight})`);
@@ -84,7 +84,7 @@ export class Swipe {
 	}
 
 	private setAttribute(name: string, value: string | number) {
-		this.rect.setAttributeNS(svgns, name, value.toString());
+		(this.rect.setAttributeNS as any)(null, name, value.toString());
 	}
 
 }
