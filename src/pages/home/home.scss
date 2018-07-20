@@ -10,7 +10,19 @@ $svg-margin: 0rem;
 	left: $svg-margin;
 }
 
-.icon {
-	fill: none;
-	stroke: #000;
+.header {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+
+	.icon {
+		width: 25%;
+		fill: none;
+		stroke: #000;
+	}
+}
+
+button {
+	position: absolute;
+	z-index: 1000;
 }

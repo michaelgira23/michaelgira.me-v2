@@ -1,4 +1,6 @@
-import { outlinePercent } from './icon';
+import 'babel-polyfill';
+
+import { fillPercent, outlinePercent } from './icon';
 import { Swipe, SwipeConfig } from './swipe';
 
 interface SwipeSequence extends SwipeConfig {
@@ -40,4 +42,7 @@ const swipes: SwipeSequence[] = [
 // 	}, swipeConfig.start);
 // }
 
-outlinePercent();
+(document.querySelector('button') as HTMLButtonElement).onclick = async () => {
+	await outlinePercent();
+	await fillPercent();
+};

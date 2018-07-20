@@ -67,20 +67,20 @@ export class Swipe {
 	}
 
 	swipeMid() {
-		this.animate(this.yMid);
+		return this.animate(this.yMid);
 	}
 
 	swipeOut() {
-		this.animate(this.yTo);
+		return this.animate(this.yTo);
 	}
 
 	private animate(y: number) {
-		anime({
+		return anime({
 			targets: this.rect,
 			y,
 			duration: this.easeDuration,
 			easing: 'easeInOutExpo'
-		});
+		}).finished;
 	}
 
 	private setAttribute(name: string, value: string | number) {
