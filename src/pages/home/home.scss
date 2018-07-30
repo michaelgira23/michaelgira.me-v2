@@ -19,23 +19,16 @@ $svg-margin: 0rem;
 	align-items: center;
 
 	.title {
-		// height: 0;
-		// overflow: hidden;
-		// text-align: center;
-
 		.name, .desc {
-			// transform: translateX(-100rem);
 			opacity: 0;
 		}
 
 		.name {
-			// opacity: 0;
 			margin-bottom: 0;
 		}
 
 		.desc {
 			margin-top: 0;
-			// opacity: 0;
 			font-weight: 300;
 			color: lighten(#000, 50%);
 		}
@@ -43,6 +36,7 @@ $svg-margin: 0rem;
 
 	.icon {
 		width: 50%;
+		max-width: 15rem;
 		stroke: #000;
 		stroke-width: 2px;
 	}
@@ -51,4 +45,10 @@ $svg-margin: 0rem;
 button {
 	position: absolute;
 	z-index: 1000;
+}
+
+@media screen and (min-width: 750px) {
+	.header {
+		flex-direction: row;
+	}
 }
