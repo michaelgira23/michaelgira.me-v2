@@ -1,16 +1,12 @@
 <%- include('../../partials/header.ejs', { title: 'Michael Gira', styles: ['./home.scss'] }) -%>
 
-<button>Staterino</button>
+<%# <button>Staterino</button> %>
 
 <div class="header">
 	<svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
 		<defs>
-			<%# <linearGradient id="fill" x1="0%" y1="100%" x2="0%" y2="0%">
-				<stop id="fill-black" offset="0%" stop-color="#000"/>
-				<stop offset="0%" stop-color="rgba(0, 0, 0, 0)"/>
-			</linearGradient> %>
 			<pattern id="fill" width="1" height="1" patternContentUnits="objectBoundingBox">
-				<rect id="fill-black" fill="#000" x="0" y="1.5" width="1" height="1">
+				<rect id="fill-black" fill="#000" x="0" y="2" width="1" height="1">
 			</pattern>
 		</defs>
 		<path id="outline" fill="url(#fill)" d="M277.1,921.6c4.3-5.5,7.9-10.3,11.8-15c12.4-15,25.1-29.8,37.3-44.9c6.6-8.1,13-16.4,18.9-25.1
@@ -42,6 +38,10 @@
 			c4.7,0.4,9.4,0.8,14.1,1c24.7,1.4,49.3,3.1,74,3.9c29.3,1,58.6,1,87.9,1.7c21.1,0.5,42.2,1.3,63.3,2.2c7.1,0.3,14.2,1.3,21.7,2
 			c-5.4,23-9.5,45.6-12.3,68.4C839.1,471.6,843.6,441.7,843.5,410.2z"/>
 	</svg>
+	<div class="title">
+		<h1 class="name">Michael Gira</h1>
+		<h2 class="desc">Full Stack Developer</h2>
+	</div>
 </div>
 
 <svg class="animation-overlay" viewbox="0 0 100 100" preserveAspectRatio="none">

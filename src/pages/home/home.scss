@@ -8,17 +8,43 @@ $svg-margin: 0rem;
 	right: $svg-margin;
 	bottom: $svg-margin;
 	left: $svg-margin;
+	pointer-events: none;
 }
 
 .header {
 	height: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+
+	.title {
+		// height: 0;
+		// overflow: hidden;
+		// text-align: center;
+
+		.name, .desc {
+			// transform: translateX(-100rem);
+			opacity: 0;
+		}
+
+		.name {
+			// opacity: 0;
+			margin-bottom: 0;
+		}
+
+		.desc {
+			margin-top: 0;
+			// opacity: 0;
+			font-weight: 300;
+			color: lighten(#000, 50%);
+		}
+	}
 
 	.icon {
-		width: 25%;
-		fill: none;
+		width: 50%;
 		stroke: #000;
+		stroke-width: 2px;
 	}
 }
 

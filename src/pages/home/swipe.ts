@@ -77,9 +77,9 @@ export class Swipe {
 	private animate(y: number) {
 		return anime({
 			targets: this.rect,
-			y,
 			duration: this.easeDuration,
-			easing: 'easeInOutExpo'
+			easing: 'easeInOutExpo',
+			y
 		}).finished;
 	}
 

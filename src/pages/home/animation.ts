@@ -2,6 +2,7 @@ import 'babel-polyfill';
 
 import { fillPercent, outlinePercent } from './icon';
 import { Swipe, SwipeConfig } from './swipe';
+import { fadeDescIn, fadeNameIn } from './title';
 
 interface SwipeSequence extends SwipeConfig {
 	start: number;
@@ -42,7 +43,11 @@ const swipes: SwipeSequence[] = [
 // 	}, swipeConfig.start);
 // }
 
-(document.querySelector('button') as HTMLButtonElement).onclick = async () => {
+// (document.querySelector('button') as HTMLButtonElement).onclick = init;
+init();
+async function init() {
 	await outlinePercent();
 	await fillPercent();
-};
+	fadeNameIn();
+	setTimeout(() => fadeDescIn(), 50);
+}

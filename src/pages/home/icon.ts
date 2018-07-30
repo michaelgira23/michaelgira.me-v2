@@ -6,21 +6,17 @@ const fill = document.querySelector('.icon #fill-black') as SVGStopElement;
 export function outlinePercent(percent = 1) {
 	return anime({
 		targets: outline,
-		strokeDashoffset: [anime.setDashoffset, () => anime.setDashoffset(outline) * (1 - percent)],
+		duration: 1000,
 		easing: 'easeInOutSine',
-		duration: 1000
+		strokeDashoffset: [anime.setDashoffset, () => anime.setDashoffset(outline) * (1 - percent)]
 	}).finished;
 }
 
 export function fillPercent(percent = 1) {
-	console.log('fill', fill);
 	return anime({
 		targets: fill,
-		y: (1 - percent) + 0.5,
-		// offset: `${percent * 100}%`,
-		// offset: percent * 100,
+		duration: 500,
 		easing: 'easeInOutExpo',
-		// easing: 'easeInOutSine',
-		duration: 500
+		y: (1 - percent) + 1
 	}).finished;
 }
