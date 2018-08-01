@@ -23,23 +23,23 @@ timeline
 	})
 	.add({
 		targets: icon,
-		duration: 1000,
+		duration: 500,
 		easing: 'easeInOutExpo',
 		translateX: ['50%', 0]
 	})
 	.add({
-		offset: '-=1000',
+		offset: '-=500',
 		targets: titleName,
-		duration: 1000,
+		duration: 500,
 		easing: 'easeInOutExpo',
-		translateX: ['-100%', 0],
+		translateX: ['5rem', 0],
 		opacity: 1
 	})
 	.add({
-		offset: '-=950',
+		offset: '-=450',
 		targets: titleDesc,
-		duration: 1000,
+		duration: 500,
 		easing: 'easeInOutExpo',
-		translateX: ['-100%', 0],
+		translateX: ['5rem', 0],
 		opacity: 1
 	});
