@@ -16,7 +16,7 @@ scripts:
 				<svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
 					<defs>
 						<pattern id="fill" width="1" height="1" patternContentUnits="objectBoundingBox">
-							<rect id="fill-black" fill="#000" x="0" y="2" width="1" height="1">
+							<rect id="fill__black" fill="#000" x="0" y="2" width="1" height="1">
 						</pattern>
 					</defs>
 					<path id="outline" fill="url(#fill)" d="M277.1,921.6c4.3-5.5,7.9-10.3,11.8-15c12.4-15,25.1-29.8,37.3-44.9c6.6-8.1,13-16.4,18.9-25.1
@@ -50,14 +50,27 @@ scripts:
 				</svg>
 			</div>
 			<div class="title">
-				<h1 class="name">Michael Gira</h1>
-				<p class="desc">Full Stack Developer</p>
+				<h1 class="title__name">Michael Gira</h1>
+				<p class="title__desc">Full Stack Developer</p>
 			</div>
 		</div>
 
 		<div class="resume-content">
 			<section>
-				<h1>Work</h1>
+				<h1>Projects</h1>
+				<div class="projects">
+					{{#each me.projects}}
+					<div class="project">
+						<div class="project__name">
+							<h2>{{name}}</h2>
+						</div>
+						<div class="project__desc">
+							<p>{{desc}}</p>
+						</div>
+						<img class="project__img" src="../../assets/projects/{{imageURL}}">
+					</div>
+					{{/each}}
+				</div>
 			</section>
 		</div>
 

@@ -2,11 +2,50 @@
 	"skills": {
 		"languages": [
 			{
-				"name": "HTML5"
+				"name": "HTML5",
+				"icon": "",
+				"proficiency": 3
+			},
+			{
+				"name": "CSS3",
+				"icon": "",
+				"proficiency": 3
+			},
+			{
+				"name": "JavaScript",
+				"icon": "",
+				"proficiency": 3
+			},
+			{
+				"name": "TypeScript",
+				"icon": "",
+				"proficiency": 3
+			},
+			{
+				"name": "Node.js",
+				"icon": "",
+				"proficiency": 3
 			}
 		],
-		"frameworks": [],
-		"miscellaneous": []
+		"frameworks": [
+			{
+				"name": "Angular",
+				"icon": "",
+				"proficiency": 3
+			}
+		],
+		"miscellaneous": [
+			{
+				"name": "Apache",
+				"icon": "",
+				"proficiency": 2
+			},
+			{
+				"name": "Nginx",
+				"icon": "",
+				"proficiency": 2
+			}
+		]
 	},
 	"projects": [
 		{
@@ -25,7 +64,7 @@
 		},
 		{
 			"name": "Pear Tutoring",
-			"desc": "Uber of peer tutoring. Won first place at the WWT Hackathon.",
+			"desc": "Uber of peer tutoring. Won first place at the 2017 World Wide Technology Hackathon!",
 			"live": "https://peartutoring.net",
 			"github": "michaelgira23/Pear-Tutoring",
 			"imageURL": "pearerino.png"

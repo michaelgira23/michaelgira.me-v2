@@ -33,10 +33,10 @@ const $body = document.body;
 
 const $icon = document.querySelector('.icon') as SVGElement;
 const $outline = document.querySelector('.icon #outline') as SVGElement;
-const $fill = document.querySelector('.icon #fill-black') as SVGStopElement;
+const $fill = document.querySelector('.icon #fill__black') as SVGStopElement;
 
-const $titleName = document.querySelector('.title .name');
-const $titleDesc = document.querySelector('.title .desc');
+const $titleName = document.querySelector('.title__name');
+const $titleDesc = document.querySelector('.title__desc');
 
 const timeline = anime.timeline();
 timeline
