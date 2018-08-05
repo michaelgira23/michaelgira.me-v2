@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		{{#each meta}}
+		<meta name="{{@key}}" content="{{this}}">
+		{{/each}}
+
+		<title>{{title}}</title>
+
+		<link rel="stylesheet" href="../../../node_modules/sanitize.css/sanitize.css">
+		<link rel="stylesheet" href="../../globals.scss">
+
+		{{#each styles}}
+		<link rel="stylesheet" href="{{this}}">
+		{{/each}}
+	</head>
+	<body>
+		{{#block "body"}}{{/block}}
+
+		{{#each scripts}}
+		<script src="{{this}}"></script>
+		{{/each}}
+
+		{{#eq NODE_ENV "production"}}
+		<script>
+			console.log('Put tracking analytics here!');
+		</script>
+		{{/eq}}
+	</body>
+</html>

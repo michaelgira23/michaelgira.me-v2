@@ -1,0 +1,18 @@
+---
+title: Browser Title
+meta:
+  author: HTML meta author
+  description: HTML meta description
+  any other: meta you want
+styles:
+  - ./your
+  - ./styles.scss
+scripts:
+  - ./your-cool-script.ts
+---
+
+{{#extend "base"}}
+	{{#content "body"}}
+		<!-- Your content goes here -->
+	{{/content}}
+{{/extend}}

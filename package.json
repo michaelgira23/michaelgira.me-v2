@@ -9,8 +9,8 @@
     "server:dev": "nodemon",
     "test": "npm run lint",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "build": "npm run clean && parcel build ./src/pages/**/*.ejs",
-    "watch": "parcel watch ./src/pages/**/*.ejs",
+    "build": "npm run clean && parcel build ./src/pages/**/*.hbs",
+    "watch": "parcel watch ./src/pages/**/*.hbs",
     "clean": "rimraf dist/* && rimraf .cache"
   },
   "repository": {
@@ -42,9 +42,9 @@
     "nodemon": "^1.18.2",
     "npm-run-all": "^4.1.3",
     "parcel-bundler": "^1.9.6",
-    "parcel-plugin-ejs": "^0.1.1",
+    "parcel-plugin-handlebars": "^0.4.4",
     "rimraf": "^2.6.2",
     "tslint": "^5.10.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.0.1"
   }
 }
