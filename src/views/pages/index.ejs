@@ -37,10 +37,10 @@
 					<h1 class="intro-hello">Hello.</h1>
 					<p class="intro-desc">My name is Michael Gira, and I'm a full-stack developer at the University of Wisconsin-Madison.</p>
 					<div class="intro-contact">
-						<a class="github" href="https://github.com/michaelgira23" target="_blank">
+						<a class="github" href="https://github.com/michaelgira23" target="_blank" rel="noopener">
 							<img src="/assets/img/github/dark.svg">
 						</a>
-						<a class="linkedin" href="https://linkedin.com/in/michael-gira" target="_blank">
+						<a class="linkedin" href="https://linkedin.com/in/michael-gira" target="_blank" rel="noopener">
 							<img src="/assets/img/contact/linkedin.png">
 						</a>
 						<a class="email" href="mailto:michael@gira.dev">michael@gira.dev</a>
@@ -64,12 +64,12 @@
 					<% projects.forEach(project => { %>
 						<div class="project">
 							<h3 class="project-heading">
-								<a class="project-code" href="https://github.com/<%= project.github %>" target="_blank">
+								<a class="project-code" href="https://github.com/<%= project.github %>" target="_blank" rel="noopener">
 									<img src="/assets/img/github/dark.svg">
 								</a>
 								<%= project.name %>
 							</h3>
-							<a class="project-hover" href="<%= project.live %>" target="_blank">
+							<a class="project-hover" href="<%= project.live %>" target="_blank" rel="noopener">
 								<!-- <img class="project-image" src="/assets/img/projects/<%= project.imageURL %>"> -->
 								<picture class="project-image">
 									<source srcset="/assets/img/projects/<%= project.imageURLwebp %>" type="image/webp">
