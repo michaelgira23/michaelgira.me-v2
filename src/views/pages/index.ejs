@@ -15,7 +15,7 @@
 		<link rel="shortcut icon" href="/favicon.ico?v=2">
 		<meta name="theme-color" content="#ffffff">
 
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:100,300,400" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:100,300,400&display=swap" rel="stylesheet"> -->
 		<link rel="stylesheet" href="/assets/css/styles.css">
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -70,7 +70,11 @@
 								<%= project.name %>
 							</h3>
 							<a class="project-hover" href="<%= project.live %>" target="_blank">
-								<img class="project-image" src="/assets/img/projects/<%= project.imageURL %>">
+								<!-- <img class="project-image" src="/assets/img/projects/<%= project.imageURL %>"> -->
+								<picture class="project-image">
+									<source srcset="/assets/img/projects/<%= project.imageURLwebp %>" type="image/webp">
+									<img src="/assets/img/projects/<%= project.imageURL %>">
+								</picture>
 								<p class="project-desc"><%= project.desc %></p>
 								<div class="hover hover--top"></div>
 								<div class="hover hover--right"></div>
