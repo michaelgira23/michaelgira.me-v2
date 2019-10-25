@@ -33,9 +33,11 @@
     "autoprefixer": "^7.2.6",
     "concurrently": "^3.1.0",
     "gulp": "^4.0.2",
+    "gulp-imagemin": "^6.1.1",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^3.2.1",
+    "gulp-webp": "^4.0.1",
     "node-sass": "^4.13.0"
   }
 }

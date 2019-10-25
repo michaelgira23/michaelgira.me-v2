@@ -4,6 +4,8 @@ const rename       = require('gulp-rename');
 const sass         = require('gulp-sass');
 const postcss      = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const webp         = require('gulp-webp');
+const imagemin     = require('gulp-imagemin');
 
 const jsonPath = './src/me.json';
 const deviconPath = './node_modules/devicon/icons/';
@@ -35,6 +37,18 @@ function jsAssets() {
 		.pipe(gulp.dest('./src/public/js'));
 }
 
+// Move project images from /assets to /public
+function imageAssetsWebp() {
+	return gulp.src(['./src/assets/**/*.{png,jpg}'])
+		.pipe(webp())
+		.pipe(gulp.dest('./src/public/img'));
+}
+function imageAssetsMinimize() {
+	return gulp.src(['./src/assets/**/*.{png,jpg}'])
+		.pipe(imagemin())
+		.pipe(gulp.dest('./src/public/img'));
+}
+
 // Move all Devicon logos from node_modules into the logos folder
 function logoAssets() {
 	// Read logos from me.json
@@ -47,5 +61,5 @@ function logoAssets() {
 		.pipe(gulp.dest('./src/public/img/logos'));
 }
 
-exports.prod = gulp.series(gulp.parallel(cssAssets, jsAssets, logoAssets), compileSass);
+exports.prod = gulp.series(gulp.parallel(cssAssets, jsAssets, imageAssetsWebp, imageAssetsMinimize, logoAssets), compileSass);
 exports.default = gulp.parallel(exports.prod, watch);

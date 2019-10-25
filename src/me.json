@@ -79,28 +79,32 @@
 			"desc": "A school portal to help organize your student life at MICDS.",
 			"live": "https://mymicds.net",
 			"github": "MyMICDS/MyMICDS-v2",
-			"imageURL": "MyMICDS.png"
+			"imageURL": "MyMICDS.png",
+			"imageURLwebp": "MyMICDS.webp"
 		},
 		{
 			"name": "swarms",
 			"desc": "The ultimate node.js library for controlling Bitcraze Crazyflie 2.0 drones ",
 			"live": "https://michaelgira23.github.io/swarms",
 			"github": "michaelgira23/swarms",
-			"imageURL": "drone.jpg"
+			"imageURL": "drone-cropped.jpg",
+			"imageURLwebp": "drone-cropped.webp"
 		},
 		{
 			"name": "Pear Tutoring",
 			"desc": "Uber of peer tutoring. Won first place at the WWT Hackathon.",
 			"live": "https://peartutoring.net",
 			"github": "michaelgira23/Pear-Tutoring",
-			"imageURL": "pearerino.png"
+			"imageURL": "pearerino.png",
+			"imageURLwebp": "pearerino.webp"
 		},
 		{
 			"name": "Nuclear Energy Simulator 2017",
 			"desc": "Plan, build, and manage nuclear power plants to become the greenest country on the planet (created for my global issues class)",
 			"live": "https://nuclear.michaelgira.me",
 			"github": "michaelgira23/nuclear-energy-simulator-2017",
-			"imageURL": "nuclear.png"
+			"imageURL": "nuclear.png",
+			"imageURLwebp": "nuclear.webp"
 		}
 	]
 }

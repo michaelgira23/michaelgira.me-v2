@@ -1,4 +1,5 @@
 @import 'normalize';
+@import 'gfonts';
 
 $black: #111;
 $white: #eee;
@@ -277,6 +278,12 @@ small {
 
 					.project-image {
 						width: 100%;
+						display: block;
+
+						* {
+							width: 100%;
+							display: block;
+						}
 					}
 
 					.project-desc {
