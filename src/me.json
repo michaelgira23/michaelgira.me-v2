@@ -1,6 +1,22 @@
 {
 	"skills": [
 		{
+			"name": "Angular",
+			"logo": "angularjs/angularjs-plain.svg"
+		},
+		{
+			"name": "React/React Native",
+			"logo": "react/react-original.svg"
+		},
+		{
+			"name": "Redux",
+			"logo": "redux/redux-original.svg"
+		},
+		{
+			"name": "Sass",
+			"logo": "sass/sass-original.svg"
+		},
+		{
 			"name": "HTML5",
 			"logo": "html5/html5-original.svg"
 		},
@@ -9,32 +25,16 @@
 			"logo": "css3/css3-original.svg"
 		},
 		{
-			"name": "Bootstrap 3 & 4",
-			"logo": "bootstrap/bootstrap-plain.svg"
-		},
-		{
-			"name": "Sass",
-			"logo": "sass/sass-original.svg"
+			"name": "TypeScript",
+			"logo": "typescript/typescript-original.svg"
 		},
 		{
 			"name": "JavaScript",
 			"logo": "javascript/javascript-original.svg"
 		},
 		{
-			"name": "jQuery",
-			"logo": "jquery/jquery-original.svg"
-		},
-		{
-			"name": "Angular 2",
-			"logo": "angularjs/angularjs-plain.svg"
-		},
-		{
 			"name": "node.js",
 			"logo": "nodejs/nodejs-original.svg"
-		},
-		{
-			"name": "MongoDB",
-			"logo": "mongodb/mongodb-original.svg"
 		},
 		{
 			"name": "Gulp",
@@ -49,8 +49,12 @@
 			"logo": "mysql/mysql-original.svg"
 		},
 		{
-			"name": "Git",
-			"logo": "git/git-original.svg"
+			"name": "PostgreSQL",
+			"logo": "postgresql/postgresql-original.svg"
+		},
+		{
+			"name": "MongoDB",
+			"logo": "mongodb/mongodb-original.svg"
 		},
 		{
 			"name": "Apache",
