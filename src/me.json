@@ -9,6 +9,10 @@
 			"logo": "react/react-original.svg"
 		},
 		{
+			"name": "Ionic",
+			"logo": "ionic/ionic-original.svg"
+		},
+		{
 			"name": "Redux",
 			"logo": "redux/redux-original.svg"
 		},
@@ -37,8 +41,20 @@
 			"logo": "nodejs/nodejs-original.svg"
 		},
 		{
+			"name": "webpack",
+			"logo": "webpack/webpack-original.svg"
+		},
+		{
 			"name": "Gulp",
 			"logo": "gulp/gulp-plain.svg"
+		},
+		{
+			"name": "Python",
+			"logo": "python/python-original.svg"
+		},
+		{
+			"name": "Java",
+			"logo": "java/java-original.svg"
 		},
 		{
 			"name": "PHP",
@@ -65,8 +81,12 @@
 			"logo": "nginx/nginx-original.svg"
 		},
 		{
-			"name": "Ubuntu",
-			"logo": "ubuntu/ubuntu-plain.svg"
+			"name": "Docker",
+			"logo": "docker/docker-original.svg"
+		},
+		{
+			"name": "AWS",
+			"logo": "amazonwebservices/amazonwebservices-original.svg"
 		},
 		{
 			"name": "Photoshop",
