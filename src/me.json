@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "Python",
-			"logo": "python/python-original.svg"
+			"logo": "python/python-plain.svg"
 		},
 		{
 			"name": "Java",
@@ -58,7 +58,7 @@
 		},
 		{
 			"name": "PHP",
-			"logo": "php/php-original.svg"
+			"logo": "php/php-plain.svg"
 		},
 		{
 			"name": "MySQL",
@@ -66,7 +66,7 @@
 		},
 		{
 			"name": "PostgreSQL",
-			"logo": "postgresql/postgresql-original.svg"
+			"logo": "postgresql/postgresql-plain.svg"
 		},
 		{
 			"name": "MongoDB",
@@ -74,7 +74,7 @@
 		},
 		{
 			"name": "Apache",
-			"logo": "apache/apache-original.svg"
+			"logo": "apache/apache-plain.svg"
 		},
 		{
 			"name": "NGINX",
@@ -82,7 +82,7 @@
 		},
 		{
 			"name": "Docker",
-			"logo": "docker/docker-original.svg"
+			"logo": "docker/docker-plain.svg"
 		},
 		{
 			"name": "AWS",
